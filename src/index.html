@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Якуп Джораев - frontend разработчик | freelancer</title>
+  <link href="./css/locomotive-scroll.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.min.css">
+</head>
+
+<body class="main__body">
+
+  <div class="site-container">
+    <div id="menu-target" data-scroll-container="true">
+      <!-- preloader -->
+
+      <!-- <div data-scroll="true" data-scroll-sticky="true" data-scroll-target="#menu-target" data-preloader
+        class="preloader">
+        <div class="preloader__wrapper">
+          <div class="preloader__left"><img src="./img/adeola-logo-left.svg" alt="adeola logo"></div>
+          <div class="preloader__right">
+            <p class="preloader__text">HTML5</p>
+            <p class="preloader__text">CSS3/SCSS</p>
+            <p class="preloader__text">JAVASCRIPT / jQuery</p>
+            <p class="preloader__text">git / gsap / npm / gulp</p>
+            <p class="preloader__text">freelancer</p>
+          </div>
+        </div>
+      </div> -->
+
+      <div class="navigation-wrapper">
+        <div class="menu-wrapper" style="display: none;">
+          <div>
+            <div class="navigation-top">
+              <div class="navigation-top__left">
+                <h4 class="navigation-h4">DONT BE A STRANGER</h4>
+                <div class="navigation-top__left--links">
+                  <a href="https://github.com/adeolaadeoti" rel="noopener" target="_blank">👾 GH</a>
+                  <a href="https://twitter.com/adeolajs" rel="noopener" target="_blank">🐦
+                    TW</a><a href="https://www.linkedin.com/in/adeoladev" rel="noopener" target="_blank">💼 LD</a><a
+                    href="https://www.instagram.com/adeolaadeoti_" rel="noopener" target="_blank">📸 IN</a>
+                </div>
+              </div>
+              <div class="navigation-top__right">
+                <h4 class="navigation-h4">HAVE AN IDEA?</h4>
+                <a href="mailto:adeolaonigegeara@gmail.com" target="_blank" rel="nofollow noopener noreferrer">Tell me
+                  about it</a>
+              </div>
+            </div>
+            <div class="navigation-bottom" style="opacity: 0;">
+              <h4 class="navigation-h4">FEATURED PROJECTS</h4>
+
+              <div class="navigation-bottom__projects">
+                <a target="_blank" rel="noopener" href="https://alexxandria.vercel.app/"
+                  class="navigation-bottom__projects-card">
+                  <img src="./img/alexxandria-nav.webp" alt="alexxandria">
+                  <h2>Alexxandria<br>Forque</h2>
+                </a>
+
+                <a href="https://safarika-adeola.netlify.app/" target="_blank" rel="noopener"
+                  class="navigation-bottom__projects-card">
+                  <img src="./img/safarika-nav.webp" alt="safarika">
+                  <h2>Safarika</h2>
+                </a>
+
+                <a href="https://adeolaadeoti.netlify.app/" target="_blank" rel="noopener"
+                  class="navigation-bottom__projects-card">
+                  <img src="./img/adeola-1.webp" alt="adeola">
+                  <h2>AdeolaAdeoti<br>Version 1</h2>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="menu-top">
+          <a class="brand-logo" href="#">
+            <img class="brand-logo__icon" src="./img/adeola-logo-left.svg" alt="adeola logo icon">
+            <div class="brand-logo__text-wrapper">
+              <p class="brand-logo__text">Якуп Джораев</p>
+            </div>
+          </a>
+          <div class="toggle-button-wrapper">
+            <span>Связь</span>
+            <button class="toggle-button">
+              <div class="toggle-button__line half start"></div>
+              <div class="toggle-button__line"></div>
+              <div class="toggle-button__line half end"></div>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Header -->
+      @@include('./html/_header.html')
+
+      <!-- Main Page -->
+      <main>
+        @@include('./html/_main.html')
+      </main>
+
+      <!-- Footer -->
+      @@include('./html/_footer.html')
+    </div>
+  </div>
+
+
+
+</body>
+
+<script src="./js/locomotive-scroll.min.js"></script>
+
+<script>
+  (function () {
+    var scroll = new LocomotiveScroll();
+  })();
+</script>
+
+<script src="./js/scripts.min.js"></script>
+
+</html>

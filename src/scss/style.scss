@@ -1,0 +1,18 @@
+// Global SCSS-files imports
+@import './vars';
+@import './reset';
+@import './global';
+@import './fonts';
+@import './animations';
+
+// Sections or Pages SCSS-files imports
+@import './header';
+@import './main';
+@import './footer';
+
+// Libs
+// @import './libs/swiper';
+
+.site-container {
+  overflow: hidden;
+}
