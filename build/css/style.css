@@ -634,6 +634,14 @@ body.locked > main > * {
   left: 0;
 }
 
+.menu-wrapper.open .navigation-bottom {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
+}
+
 .navigation-top {
   margin-top: 25rem;
   display: -webkit-box;
@@ -711,6 +719,11 @@ body.locked > main > * {
 .navigation-bottom {
   margin-top: 15rem;
   padding: 0 20rem;
+  -webkit-user-select: auto;
+     -moz-user-select: auto;
+      -ms-user-select: auto;
+          user-select: auto;
+  pointer-events: auto;
   text-align: center;
 }
 
@@ -1121,19 +1134,18 @@ body.locked > main > * {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
+  -webkit-box-align: inherit;
+      -ms-flex-align: inherit;
+          align-items: inherit;
+  width: 100%;
+  height: 100%;
 }
 
 .section-reviews__bottom-wrapper .review-card {
   background: #171e2f;
   border-radius: 2rem;
-  padding: 3rem;
-  margin: 1.5rem;
+  padding: 2rem;
+  margin: 1.2rem;
 }
 
 .section-reviews__bottom-wrapper .review-card__top {
@@ -1149,14 +1161,6 @@ body.locked > main > * {
   margin-bottom: 3rem;
 }
 
-.section-reviews__bottom-wrapper .review-card__p {
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  line-height: 81.4%;
-  letter-spacing: 0.25em;
-  color: #585e6e;
-}
-
 .section-reviews__bottom-wrapper .review-card__h3 {
   font-size: 1.9rem;
   line-height: 81.4%;
@@ -1167,8 +1171,9 @@ body.locked > main > * {
 }
 
 .section-reviews__bottom-wrapper .review-card__h2 {
-  font-size: 2rem;
-  line-height: 130.4%;
+  font-size: 1.7rem;
+  line-height: 120.4%;
+  letter-spacing: 0.01em;
   color: var(--color-white);
   font-weight: 100;
 }
@@ -1608,12 +1613,29 @@ html.has-scroll-dragging {
   background-image: linear-gradient(to right, var(--color-white), var(--color-white));
 }
 
+.project-card:hover .heading-2 {
+  background: -o-linear-gradient(135deg, var(--color-light-blue), var(--color-light-purple), var(--color-light-blue), var(--color-light-purple));
+  background: linear-gradient(-45deg, var(--color-light-blue), var(--color-light-purple), var(--color-light-blue), var(--color-light-purple));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 400% 400%;
+  -webkit-animation: gradient 3s ease infinite;
+  animation: gradient 3s ease infinite 0.5s;
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
 .heading-2 {
   font-size: 4.2rem;
   line-height: 105%;
   letter-spacing: -0.03em;
   color: var(--color-white);
   font-family: var(--font-main);
+  -webkit-transition: all 0.2s linear 0.1s;
+  -o-transition: all 0.2s linear 0.1s;
+  transition: all 0.2s linear 0.1s;
 }
 
 .alexxandria-anim {
@@ -1681,6 +1703,25 @@ html.has-scroll-dragging {
 
 .paragraph__sub {
   color: #8b8b8b;
+}
+
+.review-card {
+  max-width: 400px;
+  min-width: 400px;
+  width: 100%;
+}
+
+.review-card__top--right img {
+  width: 40px;
+  height: 40px;
+}
+
+.review-card__link {
+  font-size: 1.9rem;
+  line-height: 81.4%;
+  letter-spacing: -0.01em;
+  color: #585e6e;
+  font-weight: 100;
 }
 
 @media only screen and (min-width: 140.5em) {
