@@ -90,13 +90,17 @@
 .menu-wrapper {
   position: fixed;
   top: 0;
-  left: 0;
+  left: -100%;
   width: 100%;
-  overflow: hidden;
   height: 100vh;
   background-color: #050810;
   color: var(--color-white);
-  overflow-y: scroll;
+  overflow: hidden;
+  transition: left 430ms cubic-bezier(1, 0, 0, 1);
+}
+
+.menu-wrapper.open {
+  left: 0;
 }
 
 .navigation-top {

@@ -83,7 +83,44 @@ h6 {
   padding: 0 20px;
 }
 
+html {
+  scroll-behavior: smooth;
+  scrollbar-color: var(--color-black) #10101a;
+  scrollbar-width: thin;
+}
+
+html ::-webkit-scrollbar {
+  width: 5px;
+}
+
+html ::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html ::-webkit-scrollbar-thumb {
+  background-color: var(--color-black);
+  opacity: 0.5;
+  width: 5px;
+  border-radius: 10px;
+}
+
+body {
+  scroll-behavior: smooth;
+}
+
 body.locked {
+  overflow: hidden;
+}
+
+body.locked > main > * {
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.site-container {
   overflow: hidden;
 }
 
@@ -582,13 +619,19 @@ body.locked {
 .menu-wrapper {
   position: fixed;
   top: 0;
-  left: 0;
+  left: -100%;
   width: 100%;
-  overflow: hidden;
   height: 100vh;
   background-color: #050810;
   color: var(--color-white);
-  overflow-y: scroll;
+  overflow: hidden;
+  -webkit-transition: left 430ms cubic-bezier(1, 0, 0, 1);
+  -o-transition: left 430ms cubic-bezier(1, 0, 0, 1);
+  transition: left 430ms cubic-bezier(1, 0, 0, 1);
+}
+
+.menu-wrapper.open {
+  left: 0;
 }
 
 .navigation-top {
@@ -1638,10 +1681,6 @@ html.has-scroll-dragging {
 
 .paragraph__sub {
   color: #8b8b8b;
-}
-
-.site-container {
-  overflow: hidden;
 }
 
 @media only screen and (min-width: 140.5em) {

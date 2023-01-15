@@ -6,14 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Якуп Джораев - frontend разработчик | freelancer</title>
-  <link href="./css/locomotive-scroll.min.css" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.min.css">
 </head>
 
 <body class="main__body">
 
   <div class="site-container">
-    <div id="menu-target" data-scroll-container="true">
+    <div id="menu-target">
       <!-- preloader -->
 
       <!-- <div data-scroll="true" data-scroll-sticky="true" data-scroll-target="#menu-target" data-preloader
@@ -31,7 +30,7 @@
       </div> -->
 
       <div class="navigation-wrapper">
-        <div class="menu-wrapper" style="display: none;">
+        <div class="menu-wrapper">
           <div>
             <div class="navigation-top">
               <div class="navigation-top__left">
@@ -135,7 +134,7 @@
 
       <!-- Main Page -->
       <main>
-        <main class="container">
+        <div class="container">
   <p class="about-text">Привет 👋, меня зовут Якуп<br>
     Я сертифицированный специалист с опытом работы более года в сфере "Веб-Разрабатка".</p>
 
@@ -420,7 +419,7 @@
       <a href="#" rel="noopener" target="_blank"> <!-- -->📸 IN</a>
     </div>
   </section>
-</main>
+</div>
       </main>
 
       <!-- Footer -->
@@ -441,14 +440,9 @@
 
 </body>
 
-<script src="./js/locomotive-scroll.min.js"></script>
 
-<script>
-  (function () {
-    var scroll = new LocomotiveScroll();
-  })();
-</script>
 
+<script src="./js/SmoothScroll.min.js"></script>
 <script src="./js/scripts.min.js"></script>
 
 </html>
