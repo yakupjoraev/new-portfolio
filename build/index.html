@@ -110,9 +110,10 @@
   <div class="header__footer">
     <div class="header__footer--left">
       <div class="speaker">
-        <div class="speaker__toggle ">&nbsp;</div>
+        <button type="button" class="speaker__toggle " onclick="playPause()">&nbsp;</button>
 
         <div class="speaker__muted"><img src="./img/muted.svg" alt="muted icon"></div>
+        <audio class="speaker__audio" src="./sound/Nevada City  – Huma-Huma.mp3" type="audio/mp3"></audio>
 
         <div class="speaker__unmuted">
           <svg width="14" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -135,8 +136,80 @@
       <!-- Main Page -->
       <main>
         <div class="container">
-  <p class="about-text">Привет 👋, меня зовут Якуп<br>
-    Я сертифицированный специалист с опытом работы более года в сфере "Веб-Разрабатка".</p>
+  <div class="about-text">
+    <p class="about-text__descr">
+      <span>Якуп Джораев,</span><br>
+      Сертифицированный специалист в сфере "Веб-Разрабатка".
+      Занимается Версткой с 2020 года. Сотрудничает с известной в России командой разработчиков “Impulse IT” в качестве
+      Верстальщик | junior front-end developer.
+      <br>
+      <br>
+      Предоставлял свои услуги таким известным брендам как “МТС”; “Капитал Медицинское Страхование”; “ApStore”
+    </p>
+    <br>
+
+    <div class="about-block">
+      <h4 class="about-block__title">
+        Услуги:
+      </h4>
+
+      <ul class="about-block__List">
+        <li class="about-block__item">
+          <h5 class="about-block__descr">Сайты абсолютно разного уровня сложности.</h5>
+        </li>
+
+        <li class="about-block__item">
+          <h5 class="about-block__descr">Адаптивная, кросс-браузерная, валидная верстка</h5>
+        </li>
+
+        <li class="about-block__item">
+          <h5 class="about-block__descr">Верстка</h5>
+        </li>
+
+        <li class="about-block__item">
+          <h5 class="about-block__descr">Доработка сайтов</h5>
+        </li>
+
+        <li class="about-block__item">
+          <h5 class="about-block__descr">Интернет-магазины</h5>
+        </li>
+
+        <li class="about-block__item">
+          <h5 class="about-block__descr">Лендинги</h5>
+        </li>
+
+        <li class="about-block__item">
+          <h5 class="about-block__descr">Сайт «под ключ»</h5>
+        </li>
+      </ul>
+    </div>
+
+    <br>
+
+    <h4 class="about-block__title">
+      Навыки:
+    </h4>
+
+    <ul class="about-skills">
+      <li class="about-skill">Vue.js</li>
+      <li class="about-skill">JavaScript</li>
+      <li class="about-skill">Jquery</li>
+      <li class="about-skill">Webpack </li>
+      <li class="about-skill">HTML5 </li>
+      <li class="about-skill">SCSS</li>
+      <li class="about-skill">LESS </li>
+      <li class="about-skill">CSS </li>
+      <li class="about-skill">Git</li>
+      <li class="about-skill">Gsap</li>
+      <li class="about-skill">BEM </li>
+      <li class="about-skill">GRID </li>
+      <li class="about-skill">FLEXBOX </li>
+      <li class="about-skill">NPM </li>
+      <li class="about-skill">GULP</li>
+    </ul>
+  </div>
+
+
 
   <section id="sectionProjects" class="section-projects">
     <h1 class="heading-1"><span>Да, я много работаю </span> <small>💼</small></h1>
@@ -258,16 +331,18 @@
 
   <section class="section-reviews">
     <div class="section-reviews__top">
-      <h1 class="heading-1"><span>Немного отзывов обо мне </span> <small>😊</small></h1>
-      <p class="paragraph paragraph__sub">Что люди говорят о моих работах</p>
+      <h1 class="heading-1"><span>ЧТО ЛЮДИ ГОВОРЯТ О МОИХ РАБОТАХ</span></h1>
+      <p class="paragraph paragraph__sub">Все отзывы от настоящих людей.</p>
+      <p class="paragraph paragraph__sub">Вы можете проверить их профиль нажимая на отзыв</p>
     </div>
 
     <div class="section-reviews__bottom">
       <div class="section-reviews__bottom-wrapper review-card__anim1">
-        <div class="review-card">
+
+        <a href="https://www.fl.ru/users/izguzhinalmaz/" target="_blank" class="review-card">
           <div class="review-card__top">
             <div class="review-card__top--left">
-              <a href="https://www.fl.ru/users/izguzhinalmaz/" class="review-card__link">[izguzhinalmaz]</a>
+              <p class="review-card__link">[izguzhinalmaz]</p>
               <h3 class="review-card__h3">Алмаз Изгужин</h3>
             </div>
 
@@ -280,12 +355,12 @@
             <h2 class="review-card__h2">Отличный исполнитель. Очень хорошо сделал верстку. Рекомендую к сотрудничеству
               как опытного разработчика.</h2>
           </div>
-        </div>
+        </a>
 
-        <div class="review-card">
+        <a href="https://www.fl.ru/users/gordyvlad30/" target="_blank" class="review-card">
           <div class="review-card__top">
             <div class="review-card__top--left">
-              <a href="https://www.fl.ru/users/gordyvlad30/" class="review-card__link">[gordyvlad30]</a>
+              <p class="review-card__link">[gordyvlad30]</p>
               <h3 class="review-card__h3">Владислав Гарькушин</h3>
             </div>
 
@@ -300,12 +375,12 @@
               выполнил все по макету, внес правки в течении нескольких минут после отправки, очень приятно было работать
             </h2>
           </div>
-        </div>
+        </a>
 
-        <div class="review-card">
+        <a href="https://www.fl.ru/users/andylc/" target="_blank" class="review-card">
           <div class="review-card__top">
             <div class="review-card__top--left">
-              <a href="https://www.fl.ru/users/andylc/" class="review-card__link">[AndyLC]</a>
+              <p class="review-card__link">[AndyLC]</p>
               <h3 class="review-card__h3">Андрей Водовозов</h3>
             </div>
 
@@ -317,12 +392,12 @@
           <div class="review-card__bottom">
             <h2 class="review-card__h2">Чистая, качественная верстка, точно в срок, рекомендую!</h2>
           </div>
-        </div>
+        </a>
 
-        <div class="review-card">
+        <a href="https://www.fl.ru/users/rlogin/" target="_blank" class="review-card">
           <div class="review-card__top">
             <div class="review-card__top--left">
-              <a href="https://www.fl.ru/users/rlogin/" class="review-card__link">[rlogin]</a>
+              <p class="review-card__link">[rlogin]</p>
               <h3 class="review-card__h3">Oleg Shinyaev</h3>
             </div>
 
@@ -334,13 +409,12 @@
           <div class="review-card__bottom">
             <h2 class="review-card__h2">Рекомендую к сотрудничеству. Работа выполнена качественно.</h2>
           </div>
-        </div>
+        </a>
 
-
-        <div class="review-card">
+        <a href="https://www.fl.ru/users/mrildar96im/" target="_blank" class="review-card">
           <div class="review-card__top">
             <div class="review-card__top--left">
-              <a href="https://www.fl.ru/users/mrildar96im/" class="review-card__link">[mrildar96im]</a>
+              <p class="review-card__link">[mrildar96im]</p>
               <h3 class="review-card__h3">
                 Ildar Muradov</h3>
             </div>
@@ -355,12 +429,12 @@
               хорошо общался и очень быстро закончил работу. Так же Якуб учел все мои дополнительные пожелания. Я очень
               рекомендую его всем, кому нужна верстка сайта</h2>
           </div>
-        </div>
+        </a>
 
-        <div class="review-card">
+        <a href="https://www.fl.ru/users/maksson_06/" target="_blank" class="review-card">
           <div class="review-card__top">
             <div class="review-card__top--left">
-              <a href="https://www.fl.ru/users/maksson_06/" class="review-card__link">[maksson_06]</a>
+              <p class="review-card__link">[maksson_06]</p>
               <h3 class="review-card__h3">Maksim</h3>
             </div>
 
@@ -373,12 +447,12 @@
             <h2 class="review-card__h2">Все было сделано, быстро и качественно. Все пожелания были учтены. Правки внесли
               быстро.</h2>
           </div>
-        </div>
+        </a>
 
-        <div class="review-card">
+        <a href="https://www.fl.ru/users/izguzhinalmaz/" target="_blank" class="review-card">
           <div class="review-card__top">
             <div class="review-card__top--left">
-              <a href="https://www.fl.ru/users/izguzhinalmaz/" class="review-card__link">[izguzhinalmaz]</a>
+              <p class="review-card__link">[izguzhinalmaz]</p>
               <h3 class="review-card__h3">Алмаз Изгужин</h3>
             </div>
 
@@ -391,12 +465,12 @@
             <h2 class="review-card__h2">Отличный исполнитель. Очень хорошо сделал верстку. Рекомендую к сотрудничеству
               как опытного разработчика.</h2>
           </div>
-        </div>
+        </a>
 
-        <div class="review-card">
+        <a href="https://www.fl.ru/users/gordyvlad30/" target="_blank" class="review-card">
           <div class="review-card__top">
             <div class="review-card__top--left">
-              <a href="https://www.fl.ru/users/gordyvlad30/" class="review-card__link">[gordyvlad30]</a>
+              <p class="review-card__link">[gordyvlad30]</p>
               <h3 class="review-card__h3">Владислав Гарькушин</h3>
             </div>
 
@@ -411,12 +485,12 @@
               выполнил все по макету, внес правки в течении нескольких минут после отправки, очень приятно было работать
             </h2>
           </div>
-        </div>
+        </a>
 
-        <div class="review-card">
+        <a href="https://www.fl.ru/users/andylc/" target="_blank" class="review-card">
           <div class="review-card__top">
             <div class="review-card__top--left">
-              <a href="https://www.fl.ru/users/andylc/" class="review-card__link">[AndyLC]</a>
+              <p class="review-card__link">[AndyLC]</p>
               <h3 class="review-card__h3">Андрей Водовозов</h3>
             </div>
 
@@ -428,12 +502,12 @@
           <div class="review-card__bottom">
             <h2 class="review-card__h2">Чистая, качественная верстка, точно в срок, рекомендую!</h2>
           </div>
-        </div>
+        </a>
 
-        <div class="review-card">
+        <a href="https://www.fl.ru/users/rlogin/" target="_blank" class="review-card">
           <div class="review-card__top">
             <div class="review-card__top--left">
-              <a href="https://www.fl.ru/users/rlogin/" class="review-card__link">[rlogin]</a>
+              <p class="review-card__link">[rlogin]</p>
               <h3 class="review-card__h3">Oleg Shinyaev</h3>
             </div>
 
@@ -445,13 +519,12 @@
           <div class="review-card__bottom">
             <h2 class="review-card__h2">Рекомендую к сотрудничеству. Работа выполнена качественно.</h2>
           </div>
-        </div>
+        </a>
 
-
-        <div class="review-card">
+        <a href="https://www.fl.ru/users/mrildar96im/" target="_blank" class="review-card">
           <div class="review-card__top">
             <div class="review-card__top--left">
-              <a href="https://www.fl.ru/users/mrildar96im/" class="review-card__link">[mrildar96im]</a>
+              <p class="review-card__link">[mrildar96im]</p>
               <h3 class="review-card__h3">
                 Ildar Muradov</h3>
             </div>
@@ -466,12 +539,12 @@
               хорошо общался и очень быстро закончил работу. Так же Якуб учел все мои дополнительные пожелания. Я очень
               рекомендую его всем, кому нужна верстка сайта</h2>
           </div>
-        </div>
+        </a>
 
-        <div class="review-card">
+        <a href="https://www.fl.ru/users/maksson_06/" target="_blank" class="review-card">
           <div class="review-card__top">
             <div class="review-card__top--left">
-              <a href="https://www.fl.ru/users/maksson_06/" class="review-card__link">[maksson_06]</a>
+              <p class="review-card__link">[maksson_06]</p>
               <h3 class="review-card__h3">Maksim</h3>
             </div>
 
@@ -484,33 +557,31 @@
             <h2 class="review-card__h2">Все было сделано, быстро и качественно. Все пожелания были учтены. Правки внесли
               быстро.</h2>
           </div>
-        </div>
+        </a>
 
       </div>
     </div>
   </section>
 
   <section class="section-contact">
-    <h1 class="heading-1">
+    <!-- <h1 class="heading-1">
       <span>Остались вопросы? </span>
-      <small>🤙</small>
-    </h1>
+    </h1> -->
     <h2 class="section-contact__h2">
-      Thanks for stopping by, I’m currently looking to join a new team of creative
-      designers and developers. If you think we might be a good fit for one another, give me a
-      <a href="tel:+2349066383763"> call 🇳🇬 &nbsp;</a>
-      or send me an
-      <a href="mailto:adeolaonigegeara@gmail.com" rel="noopener" target="_blank">&nbsp; email 📧</a>.
+      Моя цель сделать ваш проект успешным! Те программы/знания/навыки, что применяю в своих проектах, позволяет мне
+      сверстать сайты абсолютно разного уровня сложности, делая их адаптивным и кросс-браузерными за короткие сроки и
+      очень качественно
+      <br>
+
     </h2>
   </section>
 
   <section class="section-socials">
     <h1 class="heading-1">
-      <span>Dont be a stranger!</span>
-      <small>👋</small>
+      <span> Напишите мне сегодня, и я вам отвечу моментально!</span>
     </h1>
 
-    <p class="paragraph">Connect with me online</p>
+    <!-- <p class="paragraph">Connect with me online</p> -->
 
     <div class="section-socials--links">
       <a href="https://github.com/yakupjoraev" rel="noopener" target="_blank">👾 GH</a>

@@ -276,7 +276,8 @@
   height: 26rem;
   background-repeat: no-repeat;
   background-size: contain;
-  background-image: url('../img/hand-left.webp');
+  background-image: url('../img/hand-left.png');
+  transform: scale(2) rotate(70deg) translateY(90px);
 }
 
 @media only screen and (max-width:45em) {
@@ -296,7 +297,8 @@
   height: 45rem;
   background-repeat: no-repeat;
   background-size: contain;
-  background-image: url('../img/hand-right.webp');
+  background-image: url('../img/hand-right.png');
+  transform: scale(2) rotate(-50deg) translateY(135px) translateX(50px);
   z-index: -1
 }
 
@@ -1328,15 +1330,57 @@ html.has-scroll-dragging {
   padding: 0 6rem;
 }
 
+.about-text span {
+  display: inline-block;
+  margin-bottom: 10px;
+  font-size: 3.7rem;
+}
+
+.about-block {}
+
+.about-block__title {
+  margin-bottom: 10px;
+  font-size: 3.7rem;
+}
+
+.about-block__List {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+
+.about-block__item {
+  position: relative;
+  padding-left: 20px;
+}
+
+.about-block__item::after {
+  position: absolute;
+  content: '';
+  top: 15px;
+  left: 0;
+  height: 2px;
+  width: 10px;
+  background-color: #fff;
+}
+
+.about-block__descr {}
+
+.about-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
 @media only screen and (max-width:56.25em) {
   .about-text {
     grid-column: 1/15;
-    padding: 0 4rem;
+    padding: 0;
   }
 
-  .about-text br {
-    display: none;
-  }
+  // .about-text br {
+  //   display: none;
+  // }
 }
 
 .paragraph {

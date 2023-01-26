@@ -37,6 +37,11 @@ setTimeout(() => {
   const preloader = document.querySelector('[data-preloader]');
   // const scrollWindow = document.querySelector('[data-scroll-container]')
 
+  if (!preloader) {
+    return null
+  }
+
+
   preloader.style.top = "-100vh";
 }, 10000)
 
@@ -85,3 +90,21 @@ SmoothScroll({
   // Поддержка тачпада
   touchpadSupport: true,
 })
+
+
+const audioToggle = document.querySelector('.speaker__toggle');
+// const audioToggleClose = document.querySelector('.speaker__toggle--anim');
+let audioFIle = document.querySelector('.speaker__audio');
+let count = 0;
+
+
+function playPause() {
+  if (count == 0) {
+    count = 1;
+    audioFIle.play();
+  } else {
+    count = 0;
+    audioFIle.pause();
+  }
+}
+
