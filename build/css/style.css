@@ -240,8 +240,8 @@ body.locked > main > * {
 
 @-webkit-keyframes reviewCardAnim1 {
   0% {
-    -webkit-transform: translateX(-52%);
-    transform: translateX(-52%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
   }
 
   to {
@@ -252,8 +252,8 @@ body.locked > main > * {
 
 @keyframes reviewCardAnim1 {
   0% {
-    -webkit-transform: translateX(-52%);
-    transform: translateX(-52%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
   }
 
   to {
@@ -956,10 +956,6 @@ body.locked > main > * {
   background: -o-linear-gradient(top, rgba(35, 37, 49, 0.5), rgba(15, 15, 24, 0.5));
   background: linear-gradient(180deg, rgba(35, 37, 49, 0.5), rgba(15, 15, 24, 0.5));
   border: 0.2rem solid #20222e;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-backdrop-filter: blur(54px);
-  backdrop-filter: blur(54px);
   border-radius: 7.3rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -967,7 +963,7 @@ body.locked > main > * {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 6rem;
+  padding: 5rem;
   position: relative;
 }
 
@@ -984,7 +980,7 @@ body.locked > main > * {
 }
 
 .section-projects .project-card__left {
-  margin-right: 6rem;
+  margin-right: 3rem;
 }
 
 .section-projects .project-card__left h4 {
@@ -1003,8 +999,9 @@ body.locked > main > * {
 }
 
 .section-projects .project-card__middle {
-  width: 35rem;
-  height: 45rem;
+  width: 40rem;
+  min-width: 40rem;
+  height: 40rem;
   background-size: cover;
   position: relative;
   border-radius: 5.3rem;
@@ -1023,40 +1020,18 @@ body.locked > main > * {
   height: 100%;
 }
 
-.section-projects .project-card__middle img:first-child {
-  position: absolute;
-  top: 0;
-  left: 0;
-  -webkit-transition: opacity 0.3s;
-  -o-transition: opacity 0.3s;
-  transition: opacity 0.3s;
-}
-
-.section-projects .project-card__middle img:nth-child(2) {
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  -o-transition: opacity 0.3s;
-  transition: opacity 0.3s;
-}
-
-.section-projects .project-card__middle img:hover:first-child {
-  left: -100%;
-  opacity: 0;
-}
-
-.section-projects .project-card__middle img:hover:nth-child(2) {
-  opacity: 1;
-}
-
 .section-projects .project-card__right {
   margin-left: 6rem;
 }
 
 .section-projects .project-card__right h2 {
   margin-bottom: 6rem;
+}
+
+.section-projects .project-card__right h2 span {
+  font-size: 2rem;
+  letter-spacing: normal;
+  line-height: 120%;
 }
 
 .section-projects .project-card__link {
@@ -1099,6 +1074,20 @@ body.locked > main > * {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 5rem;
+}
+
+.section-projects .project-card__socials a img {
+  -webkit-transition: -webkit-transform 0.2s linear;
+  transition: -webkit-transform 0.2s linear;
+  -o-transition: transform 0.2s linear;
+  transition: transform 0.2s linear;
+  transition: transform 0.2s linear, -webkit-transform 0.2s linear;
+}
+
+.section-projects .project-card__socials a img:hover {
+  -webkit-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .section-reviews__bg {
@@ -1403,7 +1392,7 @@ body {
   background-size: 400% 400%;
 }
 
-.container {
+.main-container {
   display: grid;
   grid-template-columns: 1fr repeat(12, minmax(-webkit-min-content, 10rem)) 1fr;
   grid-template-columns: 1fr repeat(12, minmax(min-content, 10rem)) 1fr;
@@ -1438,6 +1427,82 @@ body {
 
 .preloader__left {
   margin-right: 1rem;
+}
+
+.preloader__left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50px;
+  min-width: 50px;
+}
+
+.preloader__left p {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 4rem;
+  line-height: 100%;
+}
+
+.preloader__left p:nth-child(1) {
+  color: #000;
+  background-color: #fff;
+}
+
+.preloader__left p:nth-child(2) {
+  color: #fff;
+  background-color: #000;
+}
+
+.brand-logo__icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50px;
+  min-width: 50px;
+}
+
+.brand-logo__icon p {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 4rem;
+  line-height: 100%;
+}
+
+.brand-logo__icon p:nth-child(1) {
+  color: #000;
+  background-color: #fff;
+}
+
+.brand-logo__icon p:nth-child(2) {
+  color: #fff;
+  background-color: #000;
 }
 
 .preloader__right {
@@ -1776,6 +1841,67 @@ html.has-scroll-dragging {
   font-weight: 100;
 }
 
+.navigation-top__descr {
+  font-size: 3rem;
+  letter-spacing: -0.03em;
+  display: inline-block;
+  font-family: var(--font-main);
+  text-decoration: none;
+  color: var(--color-white);
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.navigation-top__title {
+  margin: 2rem 0;
+  font-size: 5rem;
+  letter-spacing: -0.03em;
+  display: inline-block;
+  font-family: var(--font-main);
+  text-decoration: none;
+  color: var(--color-white);
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.navigation-top__socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+}
+
+.navigation-top__social {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.navigation-top__social svg {
+  width: 50px;
+  height: 50px;
+  -webkit-transition: -webkit-transform 0.2s linear;
+  transition: -webkit-transform 0.2s linear;
+  -o-transition: transform 0.2s linear;
+  transition: transform 0.2s linear;
+  transition: transform 0.2s linear, -webkit-transform 0.2s linear;
+}
+
+.navigation-top__social:hover svg {
+  -webkit-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
 @media only screen and (min-width: 140.5em) {
   html {
     font-size: 75%;
@@ -1800,15 +1926,25 @@ html.has-scroll-dragging {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    text-align: left;
+    text-align: center;
     width: -moz-fit-content;
     width: -webkit-fit-content;
     width: fit-content;
     margin-right: 0;
-    margin-left: 6rem;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    margin-left: 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0 10px;
+  }
+
+  .navigation-top__title {
+    font-size: 4rem;
+  }
+
+  .navigation-top__descr {
+    font-size: 2.5rem;
+    letter-spacing: 0;
   }
 
   .navigation-top__left {
@@ -1927,6 +2063,19 @@ html.has-scroll-dragging {
   .container {
     max-width: 740px;
   }
+
+  .section-reviews {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .section-contact {
+    margin-top: 0;
+  }
+
+  .main-container {
+    padding: 0 15px;
+  }
 }
 
 @media only screen and (max-width: 45em) {
@@ -1989,6 +2138,9 @@ html.has-scroll-dragging {
 @media only screen and (max-width: 30em) {
   .section-projects .project-card__middle {
     border-radius: 3rem;
+    height: 30rem;
+    width: 30rem;
+    min-width: 30rem;
   }
 }
 
@@ -2000,13 +2152,7 @@ html.has-scroll-dragging {
 
 @media only screen and (max-width: 28em) {
   .header__hero--heading {
-    font-size: 6rem;
-  }
-}
-
-@media only screen and (max-width: 23em) {
-  .section-projects .project-card {
-    width: 90%;
+    font-size: 5rem;
   }
 }
 
