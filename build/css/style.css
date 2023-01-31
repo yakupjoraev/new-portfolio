@@ -1842,6 +1842,8 @@ html.has-scroll-dragging {
 }
 
 .navigation-top__descr {
+  max-width: 760px;
+  margin: 0 auto;
   font-size: 3rem;
   letter-spacing: -0.03em;
   display: inline-block;
@@ -1854,7 +1856,7 @@ html.has-scroll-dragging {
 }
 
 .navigation-top__title {
-  margin: 2rem 0;
+  margin: 8rem 0 2rem;
   font-size: 5rem;
   letter-spacing: -0.03em;
   display: inline-block;
