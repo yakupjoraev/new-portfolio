@@ -58,6 +58,10 @@ body {
   }
 }
 
+.main__body.hidden {
+  overflow: hidden;
+}
+
 .site-container {
   overflow: hidden;
 }

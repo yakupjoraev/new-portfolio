@@ -120,6 +120,10 @@ body.locked > main > * {
           user-select: none;
 }
 
+.main__body.hidden {
+  overflow: hidden;
+}
+
 .site-container {
   overflow: hidden;
 }
@@ -1411,6 +1415,10 @@ body {
   -webkit-transition: top 0.3s linear;
   -o-transition: top 0.3s linear;
   transition: top 0.3s linear;
+}
+
+.preloader.hidden {
+  overflow: hidden;
 }
 
 .preloader__wrapper {

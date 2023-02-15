@@ -1056,6 +1056,10 @@ body {
   transition: top 0.3s linear;
 }
 
+.preloader.hidden {
+  overflow: hidden;
+}
+
 .preloader__wrapper {
   display: flex;
   align-items: center;

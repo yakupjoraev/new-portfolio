@@ -33,6 +33,7 @@ const handleSpeaker = () => {
 
 setTimeout(() => {
   const preloader = document.querySelector('[data-preloader]');
+  const bodyHidden = document.querySelector('.main__body')
   // const scrollWindow = document.querySelector('[data-scroll-container]')
 
   if (!preloader) {
@@ -41,6 +42,7 @@ setTimeout(() => {
 
 
   preloader.style.top = "-100vh";
+  bodyHidden.classList.remove('hidden')
 }, 10000)
 
 //speaker
