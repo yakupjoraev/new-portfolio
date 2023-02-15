@@ -110,3 +110,19 @@ function playPause() {
   }
 }
 
+
+//Toggle theme
+
+// function themeBtn() {
+//   const themeBtn = document.querySelector('.theme__btn');
+
+//   if (!themeBtn) {
+//     return null
+//   }
+//   themeBtn.addEventListener('click', () => {
+//     let element = document.body;
+//     element.classList.toggle('light-mode')
+//   })
+// }
+
+// themeBtn()
