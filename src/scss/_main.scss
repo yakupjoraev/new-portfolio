@@ -1163,10 +1163,10 @@ body {
   letter-spacing: .19em;
   text-transform: uppercase;
   color: var(--color-white);
-  -webkit-animation: preloaderTextAnim 12s linear infinite;
-  animation: preloaderTextAnim 12s linear infinite;
-  -webkit-animation-delay: 2s;
-  animation-delay: 2s;
+  -webkit-animation: preloaderTextAnim 8s linear infinite;
+  animation: preloaderTextAnim 8s linear infinite;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
 }
 
 /*! locomotive-scroll v4.1.1 | MIT License | https://github.com/locomotivemtl/locomotive-scroll */

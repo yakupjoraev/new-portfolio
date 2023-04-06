@@ -43,7 +43,7 @@ setTimeout(() => {
 
   preloader.style.top = "-100vh";
   bodyHidden.classList.remove('hidden')
-}, 10000)
+}, 5500)
 
 //speaker
 
