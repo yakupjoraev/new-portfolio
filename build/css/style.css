@@ -1042,13 +1042,14 @@ body.locked > main > * {
 }
 
 .section-projects .project-card__link {
+  position: relative;
   display: inline-block;
   font-family: var(--font-main);
   font-size: 1.8rem;
   line-height: 92.4%;
   letter-spacing: 0.19em;
   text-decoration: none;
-  position: relative;
+  color: #fff;
 }
 
 .section-projects .project-card__link:after {
@@ -1181,8 +1182,8 @@ body.locked > main > * {
 }
 
 .review-card__anim1 {
-  -webkit-animation: reviewCardAnim1 25s ease-in-out infinite alternate;
-  animation: reviewCardAnim1 25s ease-in-out infinite alternate;
+  -webkit-animation: reviewCardAnim1 40s ease-in-out infinite alternate;
+  animation: reviewCardAnim1 40s ease-in-out infinite alternate;
 }
 
 .review-card__anim1:hover {
@@ -1191,8 +1192,8 @@ body.locked > main > * {
 }
 
 .review-card__anim2 {
-  -webkit-animation: reviewCardAnim2 25s ease-in-out infinite alternate;
-  animation: reviewCardAnim2 25s ease-in-out infinite alternate;
+  -webkit-animation: reviewCardAnim2 40s ease-in-out infinite alternate;
+  animation: reviewCardAnim2 40s ease-in-out infinite alternate;
 }
 
 .review-card__anim2:hover {
@@ -1944,6 +1945,17 @@ html.has-scroll-dragging {
   .container {
     max-width: 970px;
   }
+
+  .main-container {
+    padding: 0 15px;
+  }
+}
+
+@media only screen and (max-width: 991.98px) {
+  .navigation-wrapper .menu-top {
+    width: 75%;
+    padding: 2rem;
+  }
 }
 
 @media only screen and (max-width: 57em) {
@@ -2098,10 +2110,6 @@ html.has-scroll-dragging {
   .section-contact {
     margin-top: 0;
   }
-
-  .main-container {
-    padding: 0 15px;
-  }
 }
 
 @media only screen and (max-width: 45em) {
@@ -2151,11 +2159,6 @@ html.has-scroll-dragging {
 }
 
 @media only screen and (max-width: 40em) {
-  .navigation-wrapper .menu-top {
-    width: 75%;
-    padding: 2rem;
-  }
-
   .navigation-wrapper .menu-top .toggle-button-wrapper span {
     display: none;
   }
